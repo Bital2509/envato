@@ -199,9 +199,12 @@ body {
 .Event-Table {
   margin-top: 94px;
   grid-column: 1/span 12;
-  margin-bottom: 96px;
+  margin-bottom: 40px;
   display: flex;
   justify-content: center;
+  color: white;
+  font-family: Roboto;
+  text-align: center;
 }
 .Event-Table .table {
   height: 375px;
@@ -216,14 +219,207 @@ body {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-column-gap: 30px;
+  padding: 0 30px;
+}
+.Event-Table .event-header .header-time {
+  grid-column: 1/span 2;
+  font-size: 30px;
+  font-weight: bold;
+}
+.Event-Table .event-header .header-info {
+  grid-column: 4/span 5;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: left;
 }
 .Event-Table .body-info {
   background: #373737;
   height: 75px;
   box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-column-gap: 30px;
+  padding: 0 30px;
+  font-size: 22px;
 }
 .Event-Table .body-info_gray {
   background: #4b4d4f;
+}
+.Event-Table .body-info .info-time {
+  grid-column: 1/span 2;
+}
+.Event-Table .body-info .info-text {
+  grid-column: 4/span 5;
+  text-align: left;
+}
+.Event-Table .body-info .info-add {
+  grid-column: 10/span 1;
+}
+
+.Event-Table-bot-text {
+  grid-column: 3/span 8;
+  text-align: center;
+  margin-bottom: 156px;
+}
+
+.Elite-Rewards-Section {
+  position: relative;
+  color: white;
+}
+.Elite-Rewards-Section .Elite-Rewards {
+  background: #4b4d4f;
+  height: 700px;
+  clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+  z-index: 100;
+  margin-top: 0;
+}
+.Elite-Rewards-Section .Elite-Rewards .Elite-info {
+  margin-top: 175px;
+  grid-column: 5/span 7;
+  display: flex;
+  align-items: flex-end;
+  text-align: right;
+  flex-direction: column;
+  font-family: Roboto;
+}
+.Elite-Rewards-Section .Elite-title {
+  font-size: 50px;
+  font-weight: bold;
+}
+.Elite-Rewards-Section .Elite-text {
+  grid-column: 5/span 7;
+  font-size: 14px;
+  margin: 38px 0;
+}
+.Elite-Rewards-Section .Elite-button {
+  grid-column: 5/span 7;
+  width: 200px;
+  height: 55px;
+  background: #90d23d;
+  border-radius: 15px;
+  border: 0;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+}
+.Elite-Rewards-Section .Elite-Badge {
+  position: absolute;
+  top: -75px;
+  left: 164px;
+  z-index: 101;
+  filter: drop-shadow(5px 5px 10px black);
+}
+
+.speakers-title {
+  margin-top: 93px;
+  grid-column: 2/span 3;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: Roboto;
+}
+
+.speakers-text {
+  grid-column: 2/span 6;
+  font-size: 14px;
+  font-family: Roboto;
+  margin: 27px 0 0 0;
+}
+
+.green-block {
+  grid-column: 2/span 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.green-block .block-row {
+  display: flex;
+  justify-content: space-between;
+}
+.green-block .block {
+  margin-top: 62px;
+  width: 296px;
+  height: 296px;
+  background: #90d23d;
+  border-radius: 15px;
+  grid-column-end: span 4;
+  font-family: Roboto;
+  color: white;
+}
+.green-block .block_pattern {
+  background: url("../img/2.png");
+}
+.green-block .block_pattern .block-info {
+  padding: 36px 36px 23px 36px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+}
+.green-block .block_pattern .block-info hr {
+  margin: 0 0 15px 0;
+  width: 83px;
+  border: 3px white solid;
+}
+.green-block .block_pattern .block-info .block-title {
+  font-size: 45px;
+  font-weight: bold;
+}
+.green-block .block_two-fingers {
+  background: url("../img/SpeakersOne.png") no-repeat;
+  background-size: 100%;
+}
+
+.block-icon {
+  width: 150px;
+  display: flex;
+}
+.block-icon img {
+  width: 30px;
+  height: 30px;
+}
+
+.Sponsor-Us {
+  margin-top: 179px;
+  background: #4b4d4f;
+  height: 750px;
+  clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+  color: white;
+  width: 100%;
+}
+.Sponsor-Us .sponsor-info {
+  grid-column: 4/span 6;
+  margin-top: 171px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: Roboto;
+}
+.Sponsor-Us .sponsor-info .sponsor-title {
+  font-size: 50px;
+  font-weight: bold;
+}
+.Sponsor-Us .sponsor-info .sponsor-txt {
+  font-size: 14px;
+}
+.Sponsor-Us .sponsor-info .sponsor-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 48px 0 65px 0;
+}
+.Sponsor-Us .sponsor-info .sponsor-button {
+  width: 200px;
+  height: 55px;
+  border: 0;
+  border-radius: 15px;
+  background: #90d23d;
+}
+
+.text-center {
+  align-self: center;
 }
 
 /*# sourceMappingURL=global.css.map */
