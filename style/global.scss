@@ -17,7 +17,6 @@ body {
 }
 
 .container {
-  max-width: 1266px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 30px;
@@ -441,7 +440,6 @@ body {
   height: 750px;
   clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
   color: white;
-  width: 100%;
 
   .sponsor-info {
     grid-column: 4/span 6;
@@ -456,21 +454,96 @@ body {
       font-size: 50px;
       font-weight: bold;
     }
-    .sponsor-txt{
+
+    .sponsor-txt {
       font-size: 14px;
     }
-    .sponsor-img{
+
+    .sponsor-img {
       display: flex;
       align-items: center;
       justify-content: center;
       margin: 48px 0 65px 0;
     }
-    .sponsor-button{
+
+    .sponsor-button {
       width: 200px;
       height: 55px;
       border: 0;
       border-radius: 15px;
       background: $lightgreen;
+      font-size: 22px;
+      color: white;
+      font-family: Roboto;
+    }
+  }
+}
+
+.Past-Events {
+  margin-top: 117px;
+
+  .events-title {
+    grid-column: 2/span 4;
+    font-size: 50px;
+    font-family: Roboto;
+    font-weight: bold;
+    margin-bottom: 37px;
+  }
+
+  .events-text {
+    grid-column: 2/span 7;
+    font-size: 14px;
+    font-family: Roboto;
+  }
+
+  .square {
+    grid-column: 1/ span 12;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin-top: 105px;
+
+    .block {
+      height: 416px;
+
+      &_blue {
+        background: $blue;
+        grid-column: 1/span 6;
+      }
+
+      &_green {
+        background: $lightgreen;
+        grid-column-end: span 6;
+      }
+
+      &_orange {
+        background: $orange;
+        grid-column: 1/span 5;
+        height: 366px;
+      }
+
+      &_red {
+        background: $red;
+        grid-column-end: span 7;
+        height: 366px;
+      }
+    }
+  }
+
+  .events-button {
+    grid-column: 1/span 12;
+    display: flex;
+    justify-content: center;
+    margin: 98px 0 87px 0;
+
+    button {
+      height: 55px;
+      width: 200px;
+      font-size: 22px;
+      font-family: Roboto;
+      color: white;
+      background: $black;
+      border: 0;
+      border-radius: 15px;
     }
   }
 }
