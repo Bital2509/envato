@@ -238,61 +238,90 @@ body {
   text-align: center;
 
   .table {
-    height: 375px;
     width: 1030px;
     border-radius: 15px;
-    overflow: hidden
+    overflow: hidden;
   }
 
   .event-header {
     background: $green;
     height: 75px;
     box-sizing: border-box;
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-column-gap: 30px;
-    padding: 0 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 
     .header-time {
-      grid-column: 1/span 2;
       font-size: 30px;
       font-weight: bold;
     }
 
     .header-info {
-      grid-column: 4/span 5;
       font-size: 30px;
       font-weight: bold;
       text-align: left;
     }
   }
 
-  .body-info {
-    background: $black;
+  .event-body {
+    height: inherit;
+    background: #373737;
+    display: flex;
+    flex-direction: column;
+
+    button {
+      font-size: 22px;
+      font-family: Roboto;
+      color: white;
+      outline: none;
+    }
+
+    .event-button {
+      height: 75px;
+      border: 0;
+      background: $black;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 75px;
+
+      &_gray {
+        background: #4b4d4f;
+      }
+
+      .button-img {
+        width: 33px;
+        height: 33px;
+        background: url("../img/More icon.png");
+        transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+      }
+
+      .button-img_active {
+        background: url("../img/minus.png") 100% no-repeat;
+        transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+        transform: rotate(360deg);
+      }
+    }
+  }
+}
+
+.event-text {
+  display: block;
+  padding: 0;
+  height: 0;
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+
+  &_active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
     height: 75px;
-    box-sizing: border-box;
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-column-gap: 30px;
-    padding: 0 30px;
-    font-size: 22px;
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+  }
 
-    &_gray {
-      background: #4b4d4f;
-    }
-
-    .info-time {
-      grid-column: 1/span 2;
-    }
-
-    .info-text {
-      grid-column: 4/span 5;
-      text-align: left;
-    }
-
-    .info-add {
-      grid-column: 10/span 1;
-    }
+  &_grey {
+    background: #4b4d4f;
   }
 }
 

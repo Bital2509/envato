@@ -206,7 +206,6 @@ body {
   text-align: center;
 }
 .Event-Table .table {
-  height: 375px;
   width: 1030px;
   border-radius: 15px;
   overflow: hidden;
@@ -215,44 +214,71 @@ body {
   background: #a3cc40;
   height: 75px;
   box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-column-gap: 30px;
-  padding: 0 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 .Event-Table .event-header .header-time {
-  grid-column: 1/span 2;
   font-size: 30px;
   font-weight: bold;
 }
 .Event-Table .event-header .header-info {
-  grid-column: 4/span 5;
   font-size: 30px;
   font-weight: bold;
   text-align: left;
 }
-.Event-Table .body-info {
+.Event-Table .event-body {
+  height: inherit;
   background: #373737;
-  height: 75px;
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  grid-column-gap: 30px;
-  padding: 0 30px;
-  font-size: 22px;
+  display: flex;
+  flex-direction: column;
 }
-.Event-Table .body-info_gray {
+.Event-Table .event-body button {
+  font-size: 22px;
+  font-family: Roboto;
+  color: white;
+  outline: none;
+}
+.Event-Table .event-body .event-button {
+  height: 75px;
+  border: 0;
+  background: #373737;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 75px;
+}
+.Event-Table .event-body .event-button_gray {
   background: #4b4d4f;
 }
-.Event-Table .body-info .info-time {
-  grid-column: 1/span 2;
+.Event-Table .event-body .event-button .button-img {
+  width: 33px;
+  height: 33px;
+  background: url("../img/More icon.png");
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
 }
-.Event-Table .body-info .info-text {
-  grid-column: 4/span 5;
-  text-align: left;
+.Event-Table .event-body .event-button .button-img_active {
+  background: url("../img/minus.png") 100% no-repeat;
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+  transform: rotate(360deg);
 }
-.Event-Table .body-info .info-add {
-  grid-column: 10/span 1;
+
+.event-text {
+  display: block;
+  padding: 0;
+  height: 0;
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.event-text_active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  height: 75px;
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.event-text_grey {
+  background: #4b4d4f;
 }
 
 .Event-Table-bot-text {
