@@ -50,3 +50,32 @@ EventButtonFour.addEventListener('click', function () {
     EventTextFour.classList.toggle('event-text_active');
     ButtonImgFour.classList.toggle('button-img_active');
 });
+
+let FormButtonMap = document.getElementById('FormButtonMap');
+let BackgroundFormMap = document.getElementById('BackgroundFormMap');
+let FormMap = document.getElementById('FormMap');
+
+FormButtonMap.addEventListener('click', function () {
+    FormMap.classList.add('map-active');
+    BackgroundFormMap.classList.add('map-active');
+});
+
+let welcome = document.getElementById('welcome');
+
+welcome.addEventListener('click', function () {
+    FormMap.classList.remove('map-active');
+    BackgroundFormMap.classList.remove('map-active');
+});
+
+let Footer = document.getElementById('Footer');
+
+Footer.addEventListener('click', function () {
+    FormMap.classList.remove('map-active');
+    BackgroundFormMap.classList.remove('map-active');
+});
+
+let ArrowUp = document.getElementById('ArrowUp');
+
+ArrowUp.onclick = function () {
+    window.scrollTo(pageXOffset, 0);
+};
